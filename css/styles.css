@@ -536,28 +536,77 @@ img {
     height: 100%;
     position: fixed;
     top:0;
+    left:0;
     background-color:rgba(46, 47, 66, 0.4) ;
 
+    /* opacity: 0;
+    visibility: hidden;
+    pointer-events: none; */
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* .backdrop.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+} */
 
 .modal{
     width:408px ;
     min-height:584px ;
     background-color:#fcfcfc;
     border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 24px;
+    padding: 72px 24px 24px 24px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-button{
-    margin:auto 0;
-    /* margin-left: 344px; */
-    padding-top: 24px;
+/* .backdrop:not(.is-open) .modal {
+    transform: translate(-50%,-50%) scale(1.5);
+} */
+
+.close-button {
+    background-color: #e7e9fc;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 50%;
+    background-color: #e7e9fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin: auto 0;
+    
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+
+}
+.close-icon{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    
+}
+
+.close-button:hover,
+.close-button:focus{
+    background-color: #404bbf;
     border: none;
-    background-color: transparent;
+
+}
+.close-button:hover .close-icon,
+.close-button:focus .close-icon{
+    fill:#fff;
+
 }
 
 .modal-title{
@@ -611,7 +660,10 @@ img {
         line-height: 1.16667;
         letter-spacing: 0.04em;
         color: #8e8f99;
+.modal-icon-input {
+    
 
+}
 }
 .modal-field {
     margin-bottom: 8px;
