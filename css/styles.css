@@ -834,7 +834,7 @@ img {
 }
 .modal-check:checked + .checkbox-text span {
     fill: #F4F4FD;
-    border-radius: 2px;
+    
     background-color : #404bbf;
     border: none;
 
