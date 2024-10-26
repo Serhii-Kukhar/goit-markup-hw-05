@@ -733,7 +733,9 @@ img {
 }
 .button-send:hover,
 .button-send:focus {
-    background: #404bbf;
+    background-color: #404bbf;
+    border:none;
+    fill: #ffffff;
 }
 
 .modal-input:focus{
@@ -831,10 +833,9 @@ img {
 
 }
 .modal-check:checked + .checkbox-text span {
-    fill: #F4F4FD;;
+    fill: #F4F4FD;
     border-radius: 2px;
     background-color : #404bbf;
-    
     border: none;
 
 
