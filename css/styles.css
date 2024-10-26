@@ -645,6 +645,7 @@ img {
     min-width: 169px;
     height: 56px;
     display: block;   
+    margin: 0 auto  ;
     
     font-weight: 500;
     font-size: 16px;
@@ -658,6 +659,11 @@ img {
     background-color: #4d5ae5;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.button-send:hover,
+.button-send:focus {
+    background: #404bbf;
+}
+
 .modal-input:focus{
     border-color: #4D5AE5;
     
@@ -714,10 +720,44 @@ img {
 
 .modal-texarea::placeholder {
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
 }
 .modal-texarea:focus {
     border-color: #4D5AE5
+}
+.checkbox-container{
+    margin-bottom: 22px;
+}
+
+.checkbox-text {
+        font-size: 12px;
+        line-height: 1.16667;
+        letter-spacing: 0.04em;
+        color: #8e8f99;
+        display: flex;
+        align-items: center;
+        
+}
+
+.checkbox-text span{
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+        border: 1px solid rgba(46, 47, 66, 0.4);
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        fill: transparent;
+
+}
+.modal-check:checked + .checkbox-text span {
+    fill: #FFFFFF;
+    border-radius: 2px;
+    background-color : #404bbf;
+    border: 1px solid #404bbf;
+
+
 }
