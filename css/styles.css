@@ -560,6 +560,7 @@ img {
     color: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding-left: 16px;
+    
 
 
 }
@@ -596,8 +597,9 @@ img {
     background-color: #31d0aa;
 }
 
-.subscribe-input:focus {
-    
+.subscribe-input:focus,
+.subscribe-input:hover {
+    border-color: #4D5AE5;
 }
 .backdrop {
     width: 100%;
